@@ -1,0 +1,66 @@
+// ─── Clarity Engine ────────────────────────────────────────────────────────
+
+export interface ClarityInput {
+  situation: string;
+  challenge: string;
+  desiredOutcome: string;
+  context?: string;
+}
+
+export interface ClarityResult {
+  headline: string;
+  diagnosis: string;
+  rootCause: string;
+  strategicPath: string[];
+  immediateActions: { action: string; why: string }[];
+  watchouts: string[];
+  reframe: string;
+  confidenceScore: number; // 1-10
+}
+
+// ─── Demand Founder Test ────────────────────────────────────────────────────
+
+export type QuestionType = "scale" | "yesno" | "choice";
+
+export interface DemandQuestion {
+  id: string;
+  category: string;
+  question: string;
+  subtext?: string;
+  type: QuestionType;
+  options?: string[];          // for 'choice'
+  scaleMin?: number;
+  scaleMax?: number;
+  scaleLabels?: [string, string];
+  weight: number;              // 1–3 multiplier
+}
+
+export interface DemandAnswer {
+  questionId: string;
+  value: number | string;      // numeric score 0-10 or choice string
+  normalizedScore: number;     // always 0-10
+}
+
+export type DemandTier = "weak" | "emerging" | "strong" | "exceptional";
+
+export interface DemandResult {
+  score: number;              // 0-100
+  tier: DemandTier;
+  title: string;
+  tagline: string;
+  summary: string;
+  categoryBreakdown: { category: string; score: number; label: string }[];
+  strengths: string[];
+  criticalGaps: string[];
+  recommendation: string;
+  nextSteps: string[];
+  aiNarrative?: string;
+}
+
+// ─── Shared ─────────────────────────────────────────────────────────────────
+
+export interface ApiError {
+  error: string;
+  code?: string;
+}
+
