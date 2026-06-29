@@ -9,5 +9,5 @@ export type DemandResult = {
   tier: DemandTier;
 };
 
-export type DemandTier = "low" | "medium" | "high" | "exceptional";
+export type DemandTier = "low" | "medium" | "high" | "exceptional" | "strong";
 
