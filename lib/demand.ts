@@ -1,6 +1,7 @@
+import { DemandTier } from "../types/index";
 export const demandSummaries: Record<DemandTier, {
   title: string;
-  tagline: string;
+    tagline: string;
   summary: string;
 }> = {
   low: {
