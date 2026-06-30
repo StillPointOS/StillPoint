@@ -1,8 +1,9 @@
-export default function Page() {
+export default function Home() {
   return (
-    <div style={{ padding: "40px", fontFamily: "sans-serif" }}>
-      <h1>StillPointOS</h1>
-      <p>Your homepage is now live.</p>
-    </div>
+    <main style={{ padding: '2rem', fontFamily: 'system-ui' }}>
+      <h1>StillPointEOS</h1>
+      <p>Your real homepage is now live.</p>
+    </main>
   );
 }
+
