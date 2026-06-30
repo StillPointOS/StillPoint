@@ -1,9 +1,10 @@
 export default function Home() {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'system-ui' }}>
-      <h1>StillPointEOS</h1>
-      <p>Your real homepage is now live.</p>
+    <main className="min-h-screen flex flex-col items-center justify-center p-8">
+      <h1 className="text-4xl font-bold mb-4">StillPointEOS</h1>
+      <p className="text-lg text-gray-700">
+        Your real homepage is now live.
+      </p>
     </main>
   );
 }
-
